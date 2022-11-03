@@ -1,24 +1,14 @@
-# README
+This will work and we can render the root page
+```
+./bin/rails s
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This will cause a SystemStackError when we reload root page
+```
+ENABLE_PROFILER=1 ./bin/rails s
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This will work again
+```
+DD_TRACE_PG_ENABLED=false ENABLE_PROFILER=1 ./bin/rails s
+```
