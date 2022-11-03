@@ -72,5 +72,5 @@ group :test do
 end
 
 
-gem 'rack-mini-profiler', require: ['prepend_net_http_patch', 'rack-mini-profiler']
+gem 'rack-mini-profiler', require: ['prepend_net_http_patch']
 gem "ddtrace", "~> 1.5.1", require: "ddtrace/auto_instrument"
